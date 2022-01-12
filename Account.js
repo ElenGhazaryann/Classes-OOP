@@ -1,9 +1,13 @@
 "use strict";
 
 class Account {
-  constructor(...args) {
-    [this._id, this._name, this._balance] = args;
+  constructor(name, balance) {
+    this._id = Account.increment++;
+    this._name = name;
+    this._balance = balance;
   }
+  static increment = 0;
+
   get id() {
     return this._id;
   }
@@ -48,8 +52,7 @@ class Account {
   }
 }
 
-let account1 = new Account(1, "Saving account", 5000);
-
-console.log(account1.debit(200));
-console.log(account1.credit(100));
-console.log(account1.transferTo(100, 10));
+let account1 = new Account("Saving account", 5000);
+let account2 = new Account("Saving account", 5000);
+//console.log(account1.debit(200));
+console.log(account2);
