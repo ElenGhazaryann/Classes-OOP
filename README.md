@@ -184,4 +184,4 @@ console.log(user1.toString()); // Name Surname, 23 years old.
 
 Read and solve [Task 4](https://classroom.google.com/c/NDMwODEwNzI3NTMz/a/NDMyMDc0OTY0NTkz/details) in this article
 
-[Solutin](https://github.com/ElenGhazaryann/Classes-OOP/blob/main/Library.js)
+[Solution](https://github.com/ElenGhazaryann/Classes-OOP/blob/main/Library.js)
