@@ -76,17 +76,16 @@ class Student extends Person {
     }
   }
   passExam(programName, grade) {
+    // math   70
+
     let passedExams = this._program.reduce((acc, currentVal) => {
-      if (programName === currentVal.programName && grade >= 50) {
-        return acc;
-      } else if (programName === currentVal.programName && grade < 50) {
+      if (programName === currentVal.programName && grade < 50) {
         currentVal.grade = grade;
         acc.push(currentVal);
-        return acc;
-      } else {
+      } else if (programName !== currentVal.programName) {
         acc.push(currentVal);
-        return acc;
       }
+      return acc;
     }, []);
     this._program = passedExams;
     //return passedExams;
@@ -110,9 +109,6 @@ let program1 = [
 ];
 
 let person1 = new Student("Ross", "Bing", "male", 23, 2000, 1250, program1);
-console.log(person1.passExam("math", 70));
-console.log(person1.passExam("english", 40));
+person1.passExam("math", 70);
+person1.passExam("english", 40);
 console.log(person1.program);
-console.log(person1.year);
-console.log(person1.isAllPassed());
-console.log(person1.year);
